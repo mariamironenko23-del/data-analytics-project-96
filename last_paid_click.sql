@@ -59,4 +59,5 @@ ORDER BY
     utm_source ASC,
     utm_medium ASC,
     utm_campaign ASC
+
 LIMIT 10;
