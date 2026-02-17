@@ -115,7 +115,6 @@ ORDER BY
     weeks ASC,
     SUM(lpc.visitors_count) DESC
 
-
 WITH paid_sessions AS (
     SELECT
         s.visitor_id,
@@ -234,7 +233,6 @@ ORDER BY
     SUM(lpc.visitors_count) DESC,
     lpc.utm_source ASC;
 
-
 WITH paid_sessions AS (
     SELECT
         s.visitor_id,
@@ -334,7 +332,7 @@ SELECT
     lpc.leads_count,
     lpc.purchases_count,
     lpc.revenue,
-    TO_CHAR(lpc.visit_date,'YYYY') as years,
+    TO_CHAR(lpc.visit_date,'YYYY') AS years,
     TO_CHAR(lpc.visit_date, 'MM') AS months,
     TO_CHAR(lpc.visit_date, 'WW') AS weeks,
     CASE
@@ -367,5 +365,3 @@ ORDER BY
     lpc.utm_source ASC,
     lpc.utm_medium ASC,
     lpc.utm_campaign ASC;
-
-        
