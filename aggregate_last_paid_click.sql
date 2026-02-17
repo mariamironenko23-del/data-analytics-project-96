@@ -12,7 +12,6 @@ WITH paid_sessions AS (
     )
 ),
 
--- определяем последний платный визит пользователя
 last_click AS (
     SELECT *
     FROM (
@@ -27,7 +26,6 @@ last_click AS (
     WHERE rn = 1
 ),
 
--- агрегируем лиды относительно последнего клика
 last_paid_click AS (
     SELECT
         p.utm_source,
@@ -61,7 +59,6 @@ last_paid_click AS (
         p.utm_campaign
 ),
 
--- расходы из рекламных систем
 cost_ad AS (
     SELECT
         DATE(campaign_date) AS campaign_date,
@@ -90,7 +87,6 @@ cost_ad AS (
         utm_campaign
 )
 
--- финальная витрина
 SELECT
     lpc.visit_date,
     lpc.visitors_count,
