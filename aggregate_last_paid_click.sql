@@ -94,4 +94,5 @@ ORDER BY
     lpc.utm_source ASC,
     lpc.utm_medium ASC,
     lpc.utm_campaign ASC
-LIMIT 15;
+
+    LIMIT 15;
