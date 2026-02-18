@@ -102,7 +102,7 @@ ORDER BY
     weeks ASC,
     SUM(lpc.visitors_count) DESC;
 
-    WITH paid_sessions AS (
+WITH paid_sessions AS (
     SELECT
         p.visitor_id,
         p.visit_date,
@@ -327,4 +327,3 @@ ORDER BY
     lpc.utm_source ASC,
     lpc.utm_medium ASC,
     lpc.utm_campaign ASC;
-
